@@ -1,0 +1,15 @@
+form {
+
+  fieldset {
+
+    margin-bottom: 30px;
+
+    .input-text-container {
+      margin-top: 62px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@import '../app.component.scss';
+
+header {
+  min-height: 44px;
+  padding: 5px 0;
+  background-color: $colorBlueDark;
+  display: flex;
+  align-items: center;
+  color: $colorLight;
+
+  a {
+    color: $colorLight;
+    text-decoration: none;
+  }
+
+  .logo-container {
+
+    display: flex;
+    align-items: center;
+    border-right: 1px solid $colorDarkDark;
+    height: 100%;
+    width: 20%;
+    max-width: 152px;
+    padding-right: 15px;
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+
+  nav {
+    // 60%, i don't have set max-width cause ADVERTISER NAME may be longer
+    width: 60%;
+
+    a {
+      text-transform: uppercase;
+      font-size: 12px;
+
+      &:nth-of-type(2){
+        margin-left: 22px;
+      }
+
+      &:visited {
+        color: $colorLight;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .support-container {
+    width: 20%;
+    max-width: 270px;
+    margin-left: auto;
+
+    .support-link {
+      font-weight: 100;
+
+      .support-link-icon {
+        vertical-align: text-bottom;
+        margin-right: 9px;
+      }
+
+      .support-link-text {
+        color: $colorLightVeryDark
+      }
+    }
+  }
+}

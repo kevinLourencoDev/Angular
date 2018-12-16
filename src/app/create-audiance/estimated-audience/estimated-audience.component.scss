@@ -1,0 +1,11 @@
+@import '../../app.component.scss';
+
+.estimated-audience-container {
+  position: absolute;
+  right: 5%;
+  background-color: $colorLight;
+
+  .text-red {
+    color: red
+  }
+}

@@ -1,0 +1,12 @@
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <mat-step *ngFor="let step of this.stepsOptions.steps"
+            [label]="step.name | uppercase"
+            [editable]="false"
+            [stepControl]="true"
+            [completed]="step.completed"
+  >
+    <ng-template [ngTemplateOutlet]="templateRef"></ng-template>
+
+    <button mat-button matStepperNext>Next</button>
+  </mat-step>
+</mat-horizontal-stepper>

@@ -1,0 +1,40 @@
+// Size
+$maxWithContainer: 1278px;
+
+// Color
+$colorBlueLight: #17ABD0;
+$colorBlue: #15647f ;
+$colorBlueDark: #223038 ;
+
+$colorLight: #fff;
+$colorLightDark: #E3E5E6;
+$colorLightVeryDark: #c1c4c5;
+
+$colorDark: #c1c4c5;
+$colorDarkDark: #626363;
+$colorDarkVeryDark: #1d1e1e;
+
+// For material
+$blue-custom: (
+  100: $colorBlueLight,
+  200: $colorBlue,
+  300: $colorBlue,
+  400: $colorBlue,
+  500: $colorBlue,
+  600: $colorBlue,
+  700: $colorBlueDark,
+  800: $colorBlueDark,
+  900: $colorBlueDark,
+  A100: $colorBlueDark,
+  A200: $colorBlueDark,
+  A400: $colorBlueDark,
+  contrast: (
+    100: $colorLight,
+    500: $colorLight,
+    700: $colorLightDark,
+    900: $colorLightVeryDark,
+    A100: $colorDark,
+    A400: $colorDarkDark,
+    A700: $colorDarkVeryDark,
+  )
+);

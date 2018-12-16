@@ -1,0 +1,46 @@
+@import '../app.component.scss';
+
+.box {
+
+  width: 100%;
+  box-shadow: 0px 1px 10px 1px $colorLightVeryDark;
+  border-radius: 2px;
+
+  .box-title {
+    height: 40px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px 0 10px 22px;
+    border-bottom: 1px solid $colorLightDark;
+
+    @extend .text-medium;
+    @extend .text-bold;
+
+    color: $colorDarkDark
+  }
+
+  .box-content {
+    max-height: 282px;
+    overflow-x: auto;
+    padding: 30px 2.5% ;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<div class="container-chips-list">
+  <mat-chip-list #chipList>
+    <mat-chip
+      *ngFor="let interest of interests"
+      [selectable]="true"
+      [removable]="true"
+      (removed)="remove(interest)">
+      {{interest}}
+      <mat-icon matChipRemove *ngIf="true">cancel</mat-icon>
+    </mat-chip>
+  </mat-chip-list>
+</div>

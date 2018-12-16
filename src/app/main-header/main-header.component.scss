@@ -1,0 +1,32 @@
+@import '../app.component.scss';
+
+.main-header {
+  background-color: $colorBlue;
+  margin-top: 0;
+  min-height: 80px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .main-header-content {
+    color: $colorLight;
+
+    @extend .fix-size-to-container;
+
+    .main-header-title, .main-header-subtitle {
+      margin: 0;
+    }
+
+    .main-header-title {
+      font-size: 26px;
+      font-weight: 400;
+    }
+
+    .main-header-subtitle {
+      @extend .text-small;
+      font-weight: 200;
+      color: $colorLightDark;
+    }
+  }
+}

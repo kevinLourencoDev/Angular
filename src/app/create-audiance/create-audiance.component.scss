@@ -1,0 +1,7 @@
+@import '../app.component.scss';
+
+.main-content {
+  @extend .fix-size-to-container;
+
+  padding-top: 42px;
+}
