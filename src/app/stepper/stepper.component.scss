@@ -1,1 +1,17 @@
+@import '../app.component.scss';
 
+.stepperFormControl {
+
+  min-height: 80px;
+  border-top: 1px solid $colorLightDark;
+  border-bottom: 1px solid $colorLightDark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button[mat-button] {
+    &:first-child {
+      margin-right: 56px;
+    }
+  }
+}

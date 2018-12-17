@@ -1,0 +1,46 @@
+@import '../app.component.scss';
+
+footer {
+  min-height: 95px;
+  background-color: #f1f3f4;
+  padding-top: 42px;
+  box-sizing: border-box;
+  text-align: center;
+
+  .link-navigation {
+
+    @extend .text-small;
+    margin-bottom: 12px;
+
+    li {
+      display: inline-block;
+
+      a {
+        color: $colorBlue;
+        text-decoration: none;
+        display: inline-block;
+        margin-left: 8px;
+
+        &:after {
+          content: "•";
+          margin-left: 8px;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &:last-of-type {
+        a:after {
+          content: "";
+        }
+      }
+    }
+  }
+
+  .copyright {
+    color: $colorDarkDark;
+    @extend .text-small
+  }
+}

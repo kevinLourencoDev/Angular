@@ -14,4 +14,24 @@
   </fieldset>
 
   <app-tree-select></app-tree-select>
+
+  <ng-content></ng-content>
+
+  <div class="exclude-visitors">
+    <span class="text-bold">Exclude your visitors</span>
+    <p>
+      All buyer of your website or app are automatically excluded
+      <br />
+      Exclude users who visited your web site or app in the last
+
+      <mat-form-field class="exclude-visitors-select-time">
+        <mat-select value="30">
+          <mat-option *ngFor="let excludeTime of excludesTime" [value]="excludeTime.value">
+            {{excludeTime.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      Days
+    </p>
+  </div>
 </form>

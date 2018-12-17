@@ -2,10 +2,40 @@
 
 .estimated-audience-container {
   position: absolute;
-  right: 5%;
+  right: 0;
+  top: -60px;
   background-color: $colorLight;
+  width: 368px;
 
-  .text-red {
-    color: red
+  .estimated-audience-content {
+    @extend .text-center;
+    padding: 22px 40px 45px;
+
+    .estimated-audience-title {
+      @extend .text-large;
+      @extend .text-bold;
+      color: $colorDarkVeryDark;
+    }
+
+    .estimated-audience-title, .estimated-audience-cursor-container {
+      border-bottom: 1px solid $colorLightDark;
+      padding-bottom: 23px;
+      box-sizing: border-box;
+    }
+
+    .estimated-audience-cursor-container {
+      // A enlever
+      height: 100px;
+    }
+
+    .estimated-audience-description {
+      @extend .text-small;
+    }
+  }
+
+  @media all and (max-width: $maxMobileSize) {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
   }
 }

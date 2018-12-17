@@ -23,7 +23,7 @@ export class StepperComponent implements OnInit {
           name: 'Objective',
           completed: true,
         }, {
-          name: 'Fill out your name',
+          name: 'Audience',
           completed: false
         }, {
           name: 'Parameters',

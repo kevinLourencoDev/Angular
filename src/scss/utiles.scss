@@ -8,7 +8,8 @@
 .text-underline {text-decoration: underline}
 
 .fix-size-to-container {
+  position: relative;
   margin: auto;
   max-width: $maxWithContainer;
-  width: 98%;
+  width: 90%;
 }

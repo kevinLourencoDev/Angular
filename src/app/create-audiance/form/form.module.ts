@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {MatInputModule} from '@angular/material';
 
 import { TreeSelectModule } from '../../tree-select/tree-select.module';
+import {MatSelectModule} from '@angular/material/select';
 
 import { FormComponent } from './form.component';
 
@@ -11,6 +12,7 @@ import { FormComponent } from './form.component';
   imports: [
     CommonModule,
     MatInputModule,
+    MatSelectModule,
     TreeSelectModule
   ],
   exports: [

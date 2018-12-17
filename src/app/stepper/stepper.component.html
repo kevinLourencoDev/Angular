@@ -7,6 +7,9 @@
   >
     <ng-template [ngTemplateOutlet]="templateRef"></ng-template>
 
-    <button mat-button matStepperNext>Next</button>
+    <div class="stepperFormControl">
+      <button mat-button>{{'Cancel' | uppercase}}</button>
+      <button mat-raised-button color="primary" mat-button matStepperNext >{{'Create audience' | uppercase}}</button>
+    </div>
   </mat-step>
 </mat-horizontal-stepper>

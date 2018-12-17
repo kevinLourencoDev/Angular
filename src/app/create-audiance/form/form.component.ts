@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
+  excludesTime: excludesTime[] = [
+    {value: '30', viewValue: '30'},
+    {value: '60', viewValue: '60'},
+    {value: '90', viewValue: '90'}
+  ];
   constructor() { }
 
   ngOnInit() {

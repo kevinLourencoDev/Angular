@@ -8,6 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class BoxComponent implements OnInit {
 
   @Input() title: string;
+  @Input() noPadding: boolean;
+  @Input() maxHeightContent: number;
 
   constructor() { }
 

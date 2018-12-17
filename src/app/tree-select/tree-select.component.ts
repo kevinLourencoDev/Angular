@@ -37,9 +37,9 @@ const TREE_DATA = {
     'Criteo !'
   ],
   'Cameras & Optics': [
-    'Lampadaire',
-    'ou',
-    'Plante ?',
+    'No ideas',
+    'for',
+    'this category',
   ],
   'Apparel et Accessories': [
     'Webstorm',

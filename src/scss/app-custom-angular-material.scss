@@ -39,6 +39,14 @@
       }
     }
 
+    &.mat-step-label-selected {
+      &:after {
+        content: '•';
+        font-size: 28px;
+        position: absolute;
+      }
+    }
+
     .mat-step-text-label {
       @extend  .text-small;
       font-weight: bold;

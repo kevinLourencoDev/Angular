@@ -8,11 +8,13 @@ import { StepperModule } from './stepper/stepper.module';
 import { CreateAudianceModule } from './create-audiance/create-audiance.module';
 
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

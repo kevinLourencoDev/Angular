@@ -13,4 +13,10 @@ form {
   }
 }
 
-@import './app-modification-angular-material';
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@import 'app-custom-angular-material';

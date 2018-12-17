@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StepperComponent } from './stepper.component';
-import {MatStepperModule} from '@angular/material';
+import {MatButtonModule, MatStepperModule} from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
@@ -9,6 +9,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
   imports: [
     CommonModule,
     MatStepperModule,
+    MatButtonModule,
     ReactiveFormsModule,
     FormsModule,
   ],

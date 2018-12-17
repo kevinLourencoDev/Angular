@@ -1,6 +1,6 @@
 <div class="box">
   <p *ngIf="title" class="box-title">{{title}}</p>
-  <div class="box-content">
+  <div class="box-content" [class.no-padding]="noPadding" [ngStyle]="{'max-height.px': maxHeightContent}">
     <ng-content></ng-content>
   </div>
 </div>

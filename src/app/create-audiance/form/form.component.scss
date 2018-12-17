@@ -1,3 +1,5 @@
+@import '../../app.component.scss';
+
 form {
 
   fieldset {
@@ -10,6 +12,16 @@ form {
       &:first-child {
         margin-top: 0;
       }
+    }
+  }
+
+  .exclude-visitors {
+    margin-top: 45px;
+    @extend .text-small;
+
+    .exclude-visitors-select-time {
+      margin:0 10px;
+      width:60px;
     }
   }
 }
