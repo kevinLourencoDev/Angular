@@ -22,35 +22,32 @@ export class TodoItemFlatNode {
  */
 const TREE_DATA = {
   'Animals & Pet Supplies': {
-    'Belette des neiges': null,
-    'Bébé ours blanc': null,
-    'Panda roux': null,
-    'PuiPui le lapin !': null,
+    'Dog': null,
+    'Cat': null,
+    'Rabbit': null,
   },
   'Arts & Entertainment': [
-    'I practice',
+    'Painting',
     'Piano',
   ],
   'Business & Industrial': [
-    'We',
-    'love',
-    'Criteo !'
+    'Startup',
+    'Industry',
+    'CAC 40'
   ],
   'Cameras & Optics': [
-    'No ideas',
-    'for',
-    'this category',
+    'Canon',
+    'Nikon',
   ],
   'Apparel et Accessories': [
-    'Webstorm',
-    'Angular',
-    'Angular material'
+    'Dress',
+    'Bag',
+    'Sunglasses'
   ],
   'Electronics': [
-    'Linux <3',
-    'Windows...',
-    'but typescript OK',
-    'TrustInMicrosoft++'
+    'Altera',
+    'Xilinx',
+    'ARM',
   ]
 };
 
