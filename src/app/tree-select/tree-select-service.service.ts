@@ -1,66 +1,12 @@
-import {SelectionModel} from '@angular/cdk/collections';
-import {FlatTreeControl} from '@angular/cdk/tree';
-import {Component, EventEmitter, Output} from '@angular/core';
-import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
-import {ChecklistDatabase} from '../create-audiance/interests.service';
-import { TreeSelectServiceService } from './tree-select-service.service';
+import { Injectable } from '@angular/core';
+import {TodoItemFlatNode, TodoItemNode} from './tree-select.component';
 
-/** Flat to-do item node with expandable and level information */
-export class TodoItemFlatNode {
-  item: string;
-  level: number;
-  expandable: boolean;
-}
-
-export class TodoItemNode {
-  children: TodoItemNode[];
-  item: string;
-}
-
-@Component({
-  selector: 'app-tree-select',
-  templateUrl: './tree-select.component.html',
-  styleUrls: ['./tree-select.component.scss'],
-  providers: [ChecklistDatabase, TreeSelectServiceService]
+@Injectable({
+  providedIn: 'root'
 })
-export class TreeSelectComponent {
+export class TreeSelectServiceService {
 
-  @Output() changeInterests = new EventEmitter();
-
-  /** Map from flat node to nested node. This helps us finding the nested node to be modified */
-  flatNodeMap = new Map<TodoItemFlatNode, TodoItemNode>();
-
-  /** Map from nested node to flattened node. This helps us to keep the same object for selection */
-  nestedNodeMap = new Map<TodoItemNode, TodoItemFlatNode>();
-
-  treeControl: FlatTreeControl<TodoItemFlatNode>;
-
-  treeFlattener: MatTreeFlattener<TodoItemNode, TodoItemFlatNode>;
-
-  dataSource: MatTreeFlatDataSource<TodoItemNode, TodoItemFlatNode>;
-
-  interests = [];
-  /** The selection for checklist */
-  checklistSelection = new SelectionModel<TodoItemFlatNode>(true /* multiple */);
-
-  getLevel = (node: TodoItemFlatNode) => node.level;
-
-  isExpandable = (node: TodoItemFlatNode) => node.expandable;
-
-  getChildren = (node: TodoItemNode): TodoItemNode[] => node.children;
-
-  hasChild = (_: number, _nodeData: TodoItemFlatNode) => _nodeData.expandable;
-
-  constructor(private database: ChecklistDatabase) {
-    this.treeFlattener = new MatTreeFlattener(this.transformer, this.getLevel,
-      this.isExpandable, this.getChildren);
-    this.treeControl = new FlatTreeControl<TodoItemFlatNode>(this.getLevel, this.isExpandable);
-    this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-
-    database.dataChange.subscribe(data => {
-      this.dataSource.data = data;
-    });
-  }
+  constructor() { }
 
   /**
    * Transformer to convert nested node to flat node. Record the nodes in maps for later use.
