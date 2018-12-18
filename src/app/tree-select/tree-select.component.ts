@@ -3,7 +3,6 @@ import {FlatTreeControl} from '@angular/cdk/tree';
 import {Component, EventEmitter, Output} from '@angular/core';
 import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
 import {ChecklistDatabase} from '../create-audiance/interests.service';
-import { TreeSelectServiceService } from './tree-select-service.service';
 
 /** Flat to-do item node with expandable and level information */
 export class TodoItemFlatNode {
@@ -21,7 +20,7 @@ export class TodoItemNode {
   selector: 'app-tree-select',
   templateUrl: './tree-select.component.html',
   styleUrls: ['./tree-select.component.scss'],
-  providers: [ChecklistDatabase, TreeSelectServiceService]
+  providers: [ChecklistDatabase]
 })
 export class TreeSelectComponent {
 

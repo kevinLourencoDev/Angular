@@ -42,10 +42,10 @@ export class InterestsService {
 
   getAudiencesInterestsValues() {
     return {
-      'Dog': 12000000,
+      'Dog': 120000,
       'Cat': 9000000,
       'Rabbit': 4000000,
-      'Painting': 4000000,
+      'Painting': 40000000,
       'Piano': 6000000,
       'Startup': 9000000,
       'Industry': 12000000,
@@ -53,11 +53,11 @@ export class InterestsService {
       'Canon': 1400000,
       'Nikon': 8000000,
       'Dress': 20000000,
-      'Bag': 1000000,
+      'Bag': 10000000,
       'Sunglasses': 7000000,
-      'Altera': 500000,
-      'Xilinx': 400000,
-      'ARM': 200000,
+      'Altera': 5000000,
+      'Xilinx': 4000000,
+      'ARM': 2000000,
     };
   }
 }
