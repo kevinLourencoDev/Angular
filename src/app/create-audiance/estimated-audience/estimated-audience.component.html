@@ -7,7 +7,19 @@
         <app-cursor-slider min="{{audienceNumberMin}}" max="{{audienceNumberMax}}" [number]="number"></app-cursor-slider>
       </div>
       <p class="estimated-audience-description">
-        Hint and help text goes here. For example, we can tell here the problem with too big or too specific audience size.
+        <ng-container *ngIf="number === 0;else describeMin">
+          Hint and help text goes here. For example, we can tell here the problem with too big or too specific audience size.
+        </ng-container>
+        <ng-template #describeMin>
+          <ng-container *ngIf="number < audienceNumberMin;else describeMax">
+            <span class="text-danger">Please select more interest to have a minimum audience size.</span>
+          </ng-container>
+        </ng-template>
+        <ng-template #describeMax>
+          <ng-container class="text-danger" *ngIf="number > audienceNumberMax;">
+            <span class="text-danger"> Your interests is too large. You need to be more specific to target your real audience. </span>
+          </ng-container>
+        </ng-template>
       </p>
     </div>
   </app-box>

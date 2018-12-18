@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import { InterestsService } from '../interests.service';
 
 @Component({
   selector: 'app-form',
@@ -8,6 +9,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class FormComponent implements OnInit {
 
   excludesTime: object;
+  dataToLoad: string;
 
   @Output() recalculateEstimated = new EventEmitter();
 
