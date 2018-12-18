@@ -21,6 +21,14 @@
       border-bottom: 1px solid $colorLightDark;
       padding-bottom: 23px;
       box-sizing: border-box;
+      margin: 0 auto 26px;
+
+      .estimated-audience-cursor-number {
+        color: $colorBlue;
+        @extend .text-large;
+        @extend .text-bold;
+        letter-spacing: 2px;
+      }
     }
 
     .estimated-audience-cursor-container {
