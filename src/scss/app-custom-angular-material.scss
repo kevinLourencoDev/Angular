@@ -1,7 +1,7 @@
 @import '../scss/variables';
 @import '../scss/utiles';
 
-// Modification stepper componant to fit the mock
+// Modification stepper component to fit the mock
 .mat-stepper-horizontal .mat-horizontal-stepper-header-container {
   height: 87px;
   @extend .fix-size-to-container;
@@ -42,6 +42,7 @@
     &.mat-step-label-selected {
       &:after {
         content: '•';
+        color: $colorBlue;
         font-size: 28px;
         position: absolute;
       }

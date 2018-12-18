@@ -1,5 +1,4 @@
-import {Component, OnInit, ViewChild, TemplateRef, ContentChild, Input} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Component, OnInit, ViewChild, TemplateRef, ContentChild} from '@angular/core';
 import {MatStepper} from '@angular/material';
 
 @Component({
@@ -9,13 +8,15 @@ import {MatStepper} from '@angular/material';
 })
 export class StepperComponent implements OnInit {
 
-  isLinear = true;
-  secondFormGroup: FormGroup;
+  isLinear: boolean;
   stepsOptions: object;
   @ViewChild('stepper') stepper: MatStepper;
   @ContentChild(TemplateRef) templateRef: TemplateRef<object>;
 
-  constructor(private _formBuilder: FormBuilder) {
+  constructor() {
+
+    this.isLinear = true;
+
     this.stepsOptions = {
       selectedDefaultStep: 2,
       steps: [

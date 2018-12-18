@@ -14,19 +14,20 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$campaign-creation2-primary: mat-palette($blue-custom);
-$campaign-creation2-accent: $campaign-creation2-primary;
+$campaign-creation-primary: mat-palette($blue-custom);
+$campaign-creation-accent: $campaign-creation-primary;
 
 // The warn palette is optional (defaults to red).
-$campaign-creation2-warn: mat-palette($mat-red);
+$campaign-creation-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$campaign-creation2-theme: mat-light-theme($campaign-creation2-primary, $campaign-creation2-accent, $campaign-creation2-warn);
+$campaign-creation-theme: mat-light-theme($campaign-creation-primary, $campaign-creation-accent, $campaign-creation-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($campaign-creation2-theme);
+@include angular-material-theme($campaign-creation-theme);
 
+// Include our global rules
 @import './scss/global.scss';
 

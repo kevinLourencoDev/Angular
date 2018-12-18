@@ -1,9 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'amountConverter'
+  name: 'formatNumber'
 })
-export class AmountConverterPipe implements PipeTransform {
+export class FormatNumberPipe implements PipeTransform {
 
   transform(value: number | string, locale?: string): any {
     return new Intl.NumberFormat(locale, {

@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StepperComponent } from './stepper.component';
+import {CommonModule} from '@angular/common';
+import {MatButtonModule, MatStepperModule} from '@angular/material';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('StepperComponent', () => {
   let component: StepperComponent;
@@ -8,7 +12,15 @@ describe('StepperComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StepperComponent ]
+      declarations: [StepperComponent],
+      imports: [
+        CommonModule,
+        MatStepperModule,
+        MatButtonModule,
+        ReactiveFormsModule,
+        FormsModule,
+        BrowserAnimationsModule,
+      ],
     })
     .compileComponents();
   }));

@@ -1,5 +1,4 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import { InterestsService } from '../interests.service';
 
 @Component({
   selector: 'app-form',

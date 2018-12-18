@@ -19,12 +19,12 @@
     }
 
     .main-header-title {
-      font-size: 26px;
+      font-size: 34px;
       font-weight: 400;
     }
 
     .main-header-subtitle {
-      @extend .text-small;
+      @extend .text-medium;
       font-weight: 200;
       color: $colorLightDark;
     }

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TreeSelectComponent } from './tree-select.component';
+import {TodoItemFlatNode, TodoItemNode, TreeSelectComponent} from './tree-select.component';
+import {MatTreeFlatDataSource} from '@angular/material';
 
 describe('TreeComponent', () => {
   let component: TreeSelectComponent;
@@ -8,7 +9,9 @@ describe('TreeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TreeSelectComponent ]
+      declarations: [ TreeSelectComponent, TodoItemFlatNode, TodoItemNode, TreeSelectComponent ],
+      imports: [MatTreeFlatDataSource],
+      providers: []
     })
     .compileComponents();
   }));

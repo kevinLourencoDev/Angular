@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-cursor-slider',

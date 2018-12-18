@@ -1,4 +1,4 @@
-// Global utiles css
+// Global utils css
 .text-small {font-size: 12px}
 .text-medium {font-size: 14px}
 .text-large {font-size: 16px}
@@ -6,6 +6,10 @@
 .text-center {text-align: center}
 .text-bold {font-weight: bold}
 .text-underline {text-decoration: underline}
+
+.text-danger {
+  color: red;
+}
 
 .fix-size-to-container {
   position: relative;
