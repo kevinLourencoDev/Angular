@@ -1,6 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { FormatNumberPipe } from '../../pipes/format-number.pipe';
+
+import { BoxModule } from '../../box/box.module';
+import { CursorSliderModule } from '../../cursor-slider/cursor-slider.module';
+
 import { EstimatedAudienceComponent } from './estimated-audience.component';
+import {CommonModule} from '@angular/common';
 
 describe('EstimatedAudienceComponent', () => {
   let component: EstimatedAudienceComponent;
@@ -8,7 +14,15 @@ describe('EstimatedAudienceComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EstimatedAudienceComponent ]
+      declarations: [
+        EstimatedAudienceComponent,
+        FormatNumberPipe
+      ],
+      imports: [
+        CommonModule,
+        BoxModule,
+        CursorSliderModule
+      ],
     })
     .compileComponents();
   }));

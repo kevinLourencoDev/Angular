@@ -3,7 +3,7 @@
     <div class="estimated-audience-content">
       <p class="estimated-audience-title">Estimated audience size</p>
       <div class="estimated-audience-cursor-container">
-        <span class="estimated-audience-cursor-number">{{number | amountConverter}}</span>
+        <span class="estimated-audience-cursor-number">{{number | formatNumber}}</span>
         <app-cursor-slider min="{{audienceNumberMin}}" max="{{audienceNumberMax}}" [number]="number"></app-cursor-slider>
       </div>
       <p class="estimated-audience-description">

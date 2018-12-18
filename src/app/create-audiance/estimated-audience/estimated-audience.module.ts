@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { AmountConverterPipe } from '../../pipes/amount-converter.pipe';
+import { FormatNumberPipe } from '../../pipes/format-number.pipe';
+
 import { BoxModule } from '../../box/box.module';
+import { CursorSliderModule } from '../../cursor-slider/cursor-slider.module';
 
 import { EstimatedAudienceComponent } from './estimated-audience.component';
-import { CursorSliderModule } from '../../cursor-slider/cursor-slider.module';
+
 
 @NgModule({
   declarations: [
     EstimatedAudienceComponent,
-    AmountConverterPipe
+    FormatNumberPipe
   ],
   imports: [
     CommonModule,
