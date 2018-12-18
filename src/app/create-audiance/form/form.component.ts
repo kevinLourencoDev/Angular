@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-form',
@@ -9,6 +9,8 @@ export class FormComponent implements OnInit {
 
   excludesTime: object;
 
+  @Output() recalculateEstimated = new EventEmitter();
+
   constructor() {
     this.excludesTime = [
       {value: '30', viewValue: '30'},
@@ -18,5 +20,9 @@ export class FormComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  changeInterests($event: object) {
+    this.recalculateEstimated.emit($event);
   }
 }

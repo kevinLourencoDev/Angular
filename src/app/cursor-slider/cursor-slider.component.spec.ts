@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NumberSliderComponent } from './number-slider.component';
+import { CursorSliderComponent } from './cursor-slider.component';
 
 describe('NumberSliderComponent', () => {
-  let component: NumberSliderComponent;
-  let fixture: ComponentFixture<NumberSliderComponent>;
+  let component: CursorSliderComponent;
+  let fixture: ComponentFixture<CursorSliderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NumberSliderComponent ]
+      declarations: [ CursorSliderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NumberSliderComponent);
+    fixture = TestBed.createComponent(CursorSliderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

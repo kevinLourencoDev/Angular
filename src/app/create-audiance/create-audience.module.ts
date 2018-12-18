@@ -3,22 +3,22 @@ import { CommonModule } from '@angular/common';
 
 import { FormModule } from './form/form.module';
 
-import { CreateAudianceComponent } from './create-audiance.component';
+import { CreateAudienceComponent } from './create-audience.component';
 import { MainHeaderComponent } from '../main-header/main-header.component';
 import {EstimatedAudienceModule} from './estimated-audience/estimated-audience.module';
 
 @NgModule({
   declarations: [
-    CreateAudianceComponent,
+    CreateAudienceComponent,
     MainHeaderComponent,
   ],
   imports: [
     CommonModule,
     FormModule,
-    EstimatedAudienceModule
+    EstimatedAudienceModule,
   ],
   exports: [
-    CreateAudianceComponent,
+    CreateAudienceComponent,
   ]
 })
-export class CreateAudianceModule { }
+export class CreateAudienceModule { }

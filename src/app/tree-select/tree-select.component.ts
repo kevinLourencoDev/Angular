@@ -1,6 +1,6 @@
 import {SelectionModel} from '@angular/cdk/collections';
 import {FlatTreeControl} from '@angular/cdk/tree';
-import {Component, Injectable, OnInit} from '@angular/core';
+import {Component, EventEmitter, Injectable, OnInit, Output} from '@angular/core';
 import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
 import {BehaviorSubject} from 'rxjs';
 import {ChipsListComponent} from './chips-list/chips-list.component';
@@ -21,11 +21,11 @@ export class TodoItemFlatNode {
  * The Json object for to-do list data.
  */
 const TREE_DATA = {
-  'Animals & Pet Supplies': {
-    'Dog': null,
-    'Cat': null,
-    'Rabbit': null,
-  },
+  'Animals & Pet Supplies': [
+    'Dog',
+    'Cat',
+    'Rabbit',
+  ],
   'Arts & Entertainment': [
     'Painting',
     'Piano',
@@ -105,6 +105,9 @@ export class ChecklistDatabase {
   providers: [ChecklistDatabase]
 })
 export class TreeSelectComponent {
+
+  @Output() changeInterests = new EventEmitter();
+
   /** Map from flat node to nested node. This helps us finding the nested node to be modified */
   flatNodeMap = new Map<TodoItemFlatNode, TodoItemNode>();
 
@@ -244,6 +247,8 @@ export class TreeSelectComponent {
       this.checkRootNodeSelection(parent);
       parent = this.getParentNode(parent);
     }
+
+    this.changeInterests.emit(this.interests);
   }
 
   /** Check root node checked state and change it accordingly */

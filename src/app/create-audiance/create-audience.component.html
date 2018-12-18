@@ -1,6 +1,6 @@
 <app-main-header></app-main-header>
 <main class="main-content">
-  <app-form>
+  <app-form (recalculateEstimated)="sendInterestsToEstimatedAudience($event);" >
     <app-estimated-audience></app-estimated-audience>
   </app-form>
 </main>

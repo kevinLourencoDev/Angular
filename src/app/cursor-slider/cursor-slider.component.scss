@@ -1,0 +1,72 @@
+@import '../app.component.scss';
+
+$sizeCursor: 5px;
+
+.cursor-container {
+
+  position: relative;
+  padding-left:15%;
+  padding-right: 15%;
+
+  .cursor {
+    // In reality, i would have preferred font policy, cause we can use cursor has global. Here, if i want to reuse cursor, i should put him into global file. This is why i prefer font-icon.
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 14px solid $colorDark;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  &.cursor-too-high, &.cursor-too-low {
+    padding: 0;
+  }
+
+  &.cursor-too-low {
+    .cursor {
+      left: 0 - $sizeCursor !important;
+      border-top-color: $colorError;
+    }
+  }
+
+  &.cursor-too-high {
+    .cursor {
+      left: calc(100% - #{$sizeCursor}) !important;
+      border-top-color: $colorError;
+    }
+  }
+}
+
+.slider-container {
+  .slider {
+    background-color: $colorDark;
+    height: 8px;
+    border-radius: 8px;
+
+    .sub-slider {
+      border: 1px solid $colorLight;
+      border-top-width: 0;
+      border-bottom-width: 0;
+      background-color: $colorBlue;
+      height: 100%;
+      width: 70%;
+      margin: auto;
+    }
+  }
+
+  .label {
+
+    margin-top: 14px;
+    color: $colorDark;
+    @extend .text-medium;
+
+    .min {
+      float: left;
+    }
+
+    .max {
+      float: right;
+    }
+  }
+}
