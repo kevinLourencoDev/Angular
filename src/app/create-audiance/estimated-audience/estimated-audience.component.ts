@@ -16,7 +16,7 @@ export class EstimatedAudienceComponent implements OnInit {
 
   constructor(interestsService: InterestsService) {
     this.audienceNumberMin = 1000000;
-    this.audienceNumberMax = 10000000;
+    this.audienceNumberMax = 100000000;
 
     this.interestAudienceValues = interestsService.getAudiencesInterestsValues();
   }
